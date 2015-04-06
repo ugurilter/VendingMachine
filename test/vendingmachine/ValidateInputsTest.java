@@ -32,7 +32,7 @@ public class ValidateInputsTest {
      */
     @Test
     public void testValidateInputs() {
-        assertEquals(expResult, new Calculation().validateInputs(itemPrice, moneyInserted));
+        assertEquals(new Calculation().validateInputs(itemPrice, moneyInserted), expResult);
     }
     
 }
