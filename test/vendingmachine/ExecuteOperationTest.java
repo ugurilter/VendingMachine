@@ -32,7 +32,7 @@ public class ExecuteOperationTest {
      */
     @Test
     public void testExecuteOperation() {
-        System.out.println("\nTesting for inputs --> Item Price: " + itemPrice + " Money Inserted: " + moneyInserted);
+        System.out.println("\nTesting executeOperation() method for inputs --> Item Price: " + itemPrice + " Money Inserted: " + moneyInserted);
         assertEquals(expResult, new Calculation().executeOperation(itemPrice, moneyInserted));
     }
     
