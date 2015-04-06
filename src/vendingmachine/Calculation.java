@@ -1,36 +1,15 @@
 package vendingmachine;
 
-import java.util.ArrayList;
-
 public class Calculation {
-
-    private int itemPrice;
-    private int moneyInserted;
-    private int change;
+    
     private String changeList = "";
-
-    public Calculation(int itemPrice, int moneyInserted) {
-        this.itemPrice = itemPrice;
-        this.moneyInserted = moneyInserted;
-    }
-
+    
     public String getChangeList() {
         return changeList;
     }
-
-    public void setChangeList(String changeList) {
-        this.changeList = changeList;
-    }
-        
-    public int getChange() {
-        return change;
-    }
-
-    public void setChange(int change) {
-        this.change = change;
-    }
     
-    public String calculateChange(){        
+    public String calculateChange(int itemPrice, int moneyInserted){        
+        int change;
         String result = "";
         int Fifty = 0;
         int TwentyFive = 0;
@@ -52,7 +31,7 @@ public class Calculation {
         return result;
     }
     
-    public int validateInputs(){        
+    public int validateInputs(int itemPrice, int moneyInserted){        
         if(itemPrice < 25) return 0;
         if(itemPrice > 200) return 1;
         if(itemPrice % 5 != 0) return 2;
@@ -61,8 +40,8 @@ public class Calculation {
         return 5;
     }
     
-    public boolean executeOperation(){
-        int status = validateInputs();
+    public boolean executeOperation(int itemPrice, int moneyInserted){
+        int status = validateInputs(itemPrice, moneyInserted);
         
         switch(status){
             case 0:
@@ -81,7 +60,7 @@ public class Calculation {
                 System.out.println("You can not insert more than 2 liras in to the Vending Machine.");
                 break;
             case 5:
-                changeList = calculateChange();
+                changeList = calculateChange(itemPrice, moneyInserted);
                 return true;                
         }
         

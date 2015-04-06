@@ -14,9 +14,9 @@ public class VendingMachine {
         System.out.println("Enter the number of 1 lira coins you have inserted into the machine: ");
         moneyInserted = input.nextInt();
         
-        Calculation calc = new Calculation(itemPrice, moneyInserted);
+        Calculation calc = new Calculation();
         
-        if(calc.executeOperation()){
+        if(calc.executeOperation(itemPrice, moneyInserted)){
             System.out.println("You bought an item for " + itemPrice + " kuruş and gave me " + moneyInserted + " lira, so your change is:");
             System.out.println(calc.getChangeList());
         }       
