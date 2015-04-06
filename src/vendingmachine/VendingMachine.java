@@ -1,18 +1,26 @@
 package vendingmachine;
 
+import static java.lang.System.exit;
 import java.util.Scanner;
 
 public class VendingMachine {
     
     public static void main(String[] args) {
-        int itemPrice;
-        int moneyInserted;
+        int itemPrice=0;
+        int moneyInserted=0;
         Scanner input = new Scanner(System.in);      
         
-        System.out.println("Enter the price of the item: ");
-        itemPrice = input.nextInt();
-        System.out.println("Enter the number of 1 lira coins you have inserted into the machine: ");
-        moneyInserted = input.nextInt();
+        
+        try {
+            System.out.println("Enter the price of the item: ");
+            itemPrice = input.nextInt();
+            System.out.println("Enter the number of 1 lira coins you have inserted into the machine: ");
+            moneyInserted = input.nextInt();
+        }
+        catch (Exception ex){
+            System.out.println("WARNING: Bad input, Terminating !");
+            exit(0);
+        }
         
         Calculation calc = new Calculation();
         
