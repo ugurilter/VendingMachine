@@ -1,8 +1,8 @@
 package vendingmachine;
 
 /**
- * 
- * @author A. Uğur İLTER - 13070006026
+ * Calculation class that handles validation of inputs, calculation of the change and executing the payment operation.
+ * @author A. Ugur ILTER - 13070006026
  * @version 1.0
  * @since April, 2015
  */
@@ -84,8 +84,8 @@ public class Calculation {
      * Otherwise calculates the change and returns true.
      * @param itemPrice value of the item being bought from the Vending Machine.
      * @param moneyInserted amount of liras inserted to the Vending Machine.
-     * @return <li>true - if inputs are valid.</li>
-     * <li>false - if inputs are invalid.</li>
+     * @return true - if inputs are valid.
+     * false - if inputs are invalid.
      */
     public boolean executeOperation(int itemPrice, int moneyInserted){
         int status = validateInputs(itemPrice, moneyInserted);

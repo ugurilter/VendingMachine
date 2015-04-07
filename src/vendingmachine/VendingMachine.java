@@ -3,6 +3,10 @@ package vendingmachine;
 import static java.lang.System.exit;
 import java.util.Scanner;
 
+/**
+ * Main Vending Machine program.
+ * @author A.Ugur ILTER - 13070006026
+ */
 public class VendingMachine {
     
     public static void main(String[] args) {
