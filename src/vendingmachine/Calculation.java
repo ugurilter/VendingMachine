@@ -78,6 +78,15 @@ public class Calculation {
         return 5;
     }
     
+    /**
+     * Main operation called by Vending Machine to start validating inputs and calculating the change.
+     * Gives relevant error message if one of the inputs is invalid then returns false.
+     * Otherwise calculates the change and returns true.
+     * @param itemPrice value of the item being bought from the Vending Machine.
+     * @param moneyInserted amount of liras inserted to the Vending Machine.
+     * @return <li>true - if inputs are valid.</li>
+     * <li>false - if inputs are invalid.</li>
+     */
     public boolean executeOperation(int itemPrice, int moneyInserted){
         int status = validateInputs(itemPrice, moneyInserted);
         
